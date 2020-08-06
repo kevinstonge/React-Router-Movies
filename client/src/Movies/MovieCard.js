@@ -62,7 +62,7 @@ const MovieCard = (props) => {
         </div>
       ) : (
         <div
-          className="save-button"
+          className="unsave-button"
           onClick={(e) => props.removeFromSavedList(e, movie.id, title)}
         >
           Unsave

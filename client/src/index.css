@@ -1,7 +1,7 @@
 :root {
   --bg1: #222;
   --bg2: #444;
-  --fg1: #eee;
+  --fg1: #c1c;
   --fg2: #aea;
 }
 
@@ -10,7 +10,7 @@ body {
   padding: 0;
   font-family: sans-serif;
   background-color: var(--bg1);
-  color: var(--fg1);
+  color: var(--fg2);
 }
 
 .movie-card {
@@ -23,6 +23,10 @@ body {
   cursor: pointer;
   position: relative;
   margin: 1rem auto;
+}
+
+.movie-card h2 {
+  color: var(--fg1);
 }
 
 a {
@@ -53,6 +57,7 @@ a {
 
 .saved-list h3 {
   margin-right: 10px;
+  color: var(--fg1);
 }
 
 .saved-movie {
@@ -68,7 +73,8 @@ a {
   width: 75%;
   margin: 1rem auto;
 }
-.save-button {
+.save-button,
+.unsave-button {
   position: absolute;
   top: 25px;
   right: 25px;
@@ -76,8 +82,18 @@ a {
   padding: 5px 10px;
   background-color: var(--bg1);
 }
+
+.unsave-button {
+  color: var(--fg1);
+}
+
 .save-button:hover {
-  background-color: green;
+  background-color: var(--fg2);
+  color: black;
+}
+
+.unsave-button:hover {
+  background-color: var(--fg1);
   color: white;
 }
 
