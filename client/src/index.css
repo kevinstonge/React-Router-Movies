@@ -27,6 +27,7 @@ body {
 
 .movie-card h2 {
   color: var(--fg1);
+  padding-right: 50px;
 }
 
 a {
