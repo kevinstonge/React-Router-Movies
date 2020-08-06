@@ -53,12 +53,21 @@ const MovieCard = (props) => {
           </Fragment>
         ) : null}
       </div>
-      <div
-        className="save-button"
-        onClick={(e) => props.addToSavedList(e, movie.id, title)}
-      >
-        Save
-      </div>
+      {props.saved.filter((e) => e.id === movie.id).length === 0 ? (
+        <div
+          className="save-button"
+          onClick={(e) => props.addToSavedList(e, movie.id, title)}
+        >
+          Save
+        </div>
+      ) : (
+        <div
+          className="save-button"
+          onClick={(e) => props.removeFromSavedList(e, movie.id, title)}
+        >
+          Unsave
+        </div>
+      )}
     </div>
   );
 };

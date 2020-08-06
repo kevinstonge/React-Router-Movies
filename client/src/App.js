@@ -30,9 +30,15 @@ const App = () => {
     if (saved.filter((movie) => movie.id === id).length === 0) {
       setSaved([...saved, { id: id, title: title }]);
     }
-
-    // This is stretch. Prevent the same movie from being "saved" more than once
   };
+
+  const removeFromSavedList = (e, id, title) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setSaved(saved.filter((movie) => movie.id !== id));
+  };
+
+  // This is stretch. Prevent the same movie from being "saved" more than once
 
   return (
     <Router>
@@ -40,10 +46,20 @@ const App = () => {
         <SavedList list={[...saved]} />
         <Switch>
           <Route exact path="/">
-            <MovieList movies={movieList} addToSavedList={addToSavedList} />
+            <MovieList
+              movies={movieList}
+              addToSavedList={addToSavedList}
+              removeFromSavedList={removeFromSavedList}
+              saved={saved}
+            />
           </Route>
           <Route path="/movies/:id">
-            <MovieCard detailed={true} addToSavedList={addToSavedList} />
+            <MovieCard
+              detailed={true}
+              addToSavedList={addToSavedList}
+              removeFromSavedList={removeFromSavedList}
+              saved={saved}
+            />
           </Route>
         </Switch>
       </div>
