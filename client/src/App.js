@@ -7,7 +7,7 @@ import MovieCard from "./Movies/MovieCard";
 
 const App = () => {
   const [saved, setSaved] = useState([]); // Stretch: the ids of "saved" movies
-  const [movieList, setMovieList] = useState(["loading"]);
+  const [movieList, setMovieList] = useState([]);
 
   useEffect(() => {
     const getMovies = () => {
@@ -17,7 +17,6 @@ const App = () => {
           setMovieList(response.data);
         })
         .catch((error) => {
-          setMovieList([{ id: -1, title: "server error" }]);
           console.error(error);
         });
     };
