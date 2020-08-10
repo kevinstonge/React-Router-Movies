@@ -83,7 +83,7 @@ a {
 .unsave-button {
   position: absolute;
   top: 25px;
-  right: 25px;
+  right: 15px;
   border: 1px solid black;
   padding: 5px 10px;
   background-color: var(--bg1);
@@ -95,7 +95,7 @@ a {
 
 .save-button:hover {
   background-color: var(--fg2);
-  color: black;
+  color: var(--bg1);
 }
 
 .unsave-button:hover {
@@ -109,8 +109,8 @@ a {
 }
 
 .home-button:hover {
-  background-color: green;
-  color: white;
+  background-color: var(--fg2);
+  color: var(--bg1);
 }
 
 .home-button,
