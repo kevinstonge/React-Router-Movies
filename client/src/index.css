@@ -1,10 +1,12 @@
 :root {
   --bg1: #222;
   --bg2: #444;
-  --fg1: #c1c;
+  --fg1: #a8f;
   --fg2: #aea;
 }
-
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
@@ -50,19 +52,24 @@ a {
   cursor: pointer;
   position: relative;
   margin: 1rem auto;
-  width: 75%;
+  width: 80vw;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
+.movie-list {
+  width: 90vw;
+  margin: auto;
+}
 
 .saved-list h3 {
-  margin-right: 10px;
+  padding-right: 10px;
   color: var(--fg1);
 }
 
 .saved-movie {
-  margin: 0 10px;
+  padding: 0 10px;
 }
 .saved-active {
   color: blue;
@@ -71,7 +78,7 @@ a {
 }
 .save-wrapper {
   position: relative;
-  width: 75%;
+  width: 80vw;
   margin: 1rem auto;
 }
 .save-button,
