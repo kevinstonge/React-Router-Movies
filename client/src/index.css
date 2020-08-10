@@ -19,8 +19,7 @@ body {
   background-color: var(--bg2);
   color: var(--fg2);
   border: 0;
-  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
-    0 2px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 -1px 0 var(--fg2), 2px 2px 2px 1px black;
   padding: 1rem;
   cursor: pointer;
   position: relative;
@@ -46,8 +45,7 @@ a {
   background-color: var(--bg2);
   color: var(--fg2);
   border: 0;
-  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
-    0 2px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 -1px 0 var(--fg2), 2px 2px 2px 1px black;
   padding: 1rem;
   cursor: pointer;
   position: relative;
@@ -113,4 +111,13 @@ a {
 .home-button:hover {
   background-color: green;
   color: white;
+}
+
+.home-button,
+.save-button {
+  box-shadow: 0 -1px 0 var(--fg2), 1px 1px 1px 0 black;
+}
+
+.unsave-button {
+  box-shadow: 0 -1px 0 var(--fg1), 1px 1px 1px 0 black;
 }
