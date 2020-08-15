@@ -1,19 +1,39 @@
+:root {
+  --bg1: #222;
+  --bg2: #444;
+  --fg1: #a8f;
+  --fg2: #aea;
+}
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: #f2f2f2;
+  background-color: var(--bg1);
+  color: var(--fg2);
 }
 
 .movie-card {
-  background-color: #fff;
+  background-color: var(--bg2);
+  color: var(--fg2);
   border: 0;
-  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
-    0 2px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 -1px 0 var(--fg2), 2px 2px 2px 1px black;
   padding: 1rem;
   cursor: pointer;
   position: relative;
   margin: 1rem auto;
+}
+
+.movie-card h2 {
+  color: var(--fg1);
+  padding-right: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--fg2);
 }
 
 .movie-director {
@@ -22,26 +42,32 @@ body {
 }
 
 .saved-list {
-  background-color: #fff;
+  background-color: var(--bg2);
+  color: var(--fg2);
   border: 0;
-  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
-    0 2px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 -1px 0 var(--fg2), 2px 2px 2px 1px black;
   padding: 1rem;
   cursor: pointer;
   position: relative;
   margin: 1rem auto;
-  width: 75%;
+  width: 80vw;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
+.movie-list {
+  width: 90vw;
+  margin: auto;
+}
 
 .saved-list h3 {
-  margin-right: 10px;
+  padding-right: 10px;
+  color: var(--fg1);
 }
 
 .saved-movie {
-  margin: 0 10px;
+  padding: 0 10px;
 }
 .saved-active {
   color: blue;
@@ -50,23 +76,48 @@ body {
 }
 .save-wrapper {
   position: relative;
-  width: 75%;
+  width: 80vw;
   margin: 1rem auto;
 }
-.save-button {
+.save-button,
+.unsave-button {
   position: absolute;
   top: 25px;
-  right: 25px;
-  border: 1px solid grey;
+  right: 15px;
+  border: 1px solid black;
   padding: 5px 10px;
-  background-color: lightseagreen;
+  background-color: var(--bg1);
 }
+
+.unsave-button {
+  color: var(--fg1);
+}
+
 .save-button:hover {
-  background-color: green;
+  background-color: var(--fg2);
+  color: var(--bg1);
+}
+
+.unsave-button:hover {
+  background-color: var(--fg1);
   color: white;
 }
 
 .home-button {
   padding: 5px 10px;
-  background-color: lightskyblue;
+  background-color: var(--bg1);
+}
+
+.home-button:hover {
+  background-color: var(--fg2);
+  color: var(--bg1);
+}
+
+.home-button,
+.save-button {
+  box-shadow: 0 -1px 0 var(--fg2), 1px 1px 1px 0 black;
+}
+
+.unsave-button {
+  box-shadow: 0 -1px 0 var(--fg1), 1px 1px 1px 0 black;
 }
